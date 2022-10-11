@@ -10,6 +10,7 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
+  font_awesome_flutter: ^10.2.1
 
 dev_dependencies:
   flutter_test:
@@ -25,10 +26,43 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: Metropolis
+      fonts:
+        - asset: assets/fonts/Metropolis-Thin.otf
+          weight: 100
+        - asset: assets/fonts/Metropolis-Light.otf
+          weight: 300
+        - asset: assets/fonts/Metropolis-Regular.otf
+          weight: 400
+        - asset: assets/fonts/Metropolis-Medium.otf
+          weight: 500
+        - asset: assets/fonts/Metropolis-SemiBold.otf
+          weight: 600
+        - asset: assets/fonts/Metropolis-Bold.otf
+          weight: 700
+        - asset: assets/fonts/Metropolis-ExtraBold.otf
+          weight: 800
+        - asset: assets/fonts/Metropolis-Black.otf
+          weight: 900
+  
+    - family: IranYekan
+      fonts:
+        - asset: assets/fonts/IRANYekanMobileThin.ttf
+          weight: 100
+        - asset: assets/fonts/IRANYekanMobileLight.ttf
+          weight: 300
+        - asset: assets/fonts/IRANYekanMobileRegular.ttf
+          weight: 400
+        - asset: assets/fonts/IRANYekanMobileMedium.ttf
+          weight: 500
+        - asset: assets/fonts/IRANYekanMobileBold.ttf
+          weight: 700
+        - asset: assets/fonts/IRANYekanMobileExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/IRANYekanMobileBlack.ttf
+          weight: 900
+        
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
