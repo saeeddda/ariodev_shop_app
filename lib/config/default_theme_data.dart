@@ -14,6 +14,7 @@ class DefaultThemeData {
   final Color errorColor;
   final Color successColor;
   final Color hotAndSaleColor;
+  final Brightness brightness;
 
   DefaultThemeData.light()
       : defaultFontFamily = DefaultFont.englishFont,
@@ -26,7 +27,8 @@ class DefaultThemeData {
         backgroundColor = DefaultLightColor.backgroundColor,
         errorColor = DefaultLightColor.errorColor,
         successColor = DefaultLightColor.successColor,
-        hotAndSaleColor = DefaultLightColor.hotAndSaleColor;
+        hotAndSaleColor = DefaultLightColor.hotAndSaleColor,
+        brightness = Brightness.light;
 
   DefaultThemeData.dark()
       : defaultFontFamily = DefaultFont.englishFont,
@@ -39,10 +41,15 @@ class DefaultThemeData {
         backgroundColor = DefaultDarkColor.backgroundColor,
         errorColor = DefaultDarkColor.errorColor,
         successColor = DefaultDarkColor.successColor,
-        hotAndSaleColor = DefaultDarkColor.hotAndSaleColor;
+        hotAndSaleColor = DefaultDarkColor.hotAndSaleColor,
+        brightness = Brightness.dark;
 
   ThemeData get getTheme {
     return ThemeData(
+      backgroundColor: backgroundColor,
+      brightness: brightness,
+      fontFamily: defaultFontFamily,
+      errorColor: errorColor,
       textTheme: TextTheme(
         headline1: TextStyle(
           fontFamily: defaultFontFamily,
