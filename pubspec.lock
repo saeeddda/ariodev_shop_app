@@ -88,27 +88,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  google_fonts:
+  font_awesome_flutter:
     dependency: "direct main"
     description:
-      name: google_fonts
+      name: font_awesome_flutter
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.1"
-  http:
-    dependency: transitive
-    description:
-      name: http
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.13.5"
-  http_parser:
-    dependency: transitive
-    description:
-      name: http_parser
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.0.1"
+    version: "10.2.1"
   lints:
     dependency: transitive
     description:
