@@ -127,6 +127,8 @@ class DefaultThemeData {
             borderRadius:
                 BorderRadius.circular(DefaultDimensions.defaultTextFieldBorder),
             borderSide: BorderSide.none),
+        fillColor: whiteColor,
+        filled: true,
       ),
       appBarTheme: AppBarTheme(
         backgroundColor: backgroundColor,
