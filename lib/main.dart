@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/screen/home_screen.dart';
-import 'package:shop_app/screen/login_screen.dart';
+import 'package:shop_app/screens/home_screen.dart';
 import 'package:shop_app/config/default_theme_data.dart';
 
 void main() {
@@ -15,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Shoping App',
       theme: DefaultThemeData.light().getTheme,
+      debugShowCheckedModeBanner: false,
       home: const HomeScreen(),
     );
   }

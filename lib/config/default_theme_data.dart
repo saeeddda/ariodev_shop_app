@@ -100,6 +100,20 @@ class DefaultThemeData {
           color: primaryTextColor,
         ),
       ),
+      textButtonTheme: TextButtonThemeData(
+        style: ButtonStyle(
+          elevation: MaterialStateProperty.all(0.0),
+          overlayColor: MaterialStateProperty.all(Colors.transparent),
+          textStyle: MaterialStateProperty.all(
+            TextStyle(
+              fontFamily: defaultFontFamily,
+              fontSize: 11.0,
+              fontWeight: FontWeight.w400,
+              color: primaryTextColor,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
