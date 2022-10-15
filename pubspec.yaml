@@ -11,6 +11,7 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   font_awesome_flutter: ^10.2.1
+  flutter_rating_bar: ^4.0.1
 
 dev_dependencies:
   flutter_test:
@@ -24,7 +25,12 @@ flutter:
 
   assets:
     - assets/icons/
-    - assets/images/
+    - assets/images/avatar/
+    - assets/images/category/
+    - assets/images/discount/
+    - assets/images/other/
+    - assets/images/products/
+    - assets/images/reviews/
 
   fonts:
     - family: Metropolis
