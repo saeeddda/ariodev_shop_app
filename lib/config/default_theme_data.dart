@@ -133,6 +133,7 @@ class DefaultThemeData {
       appBarTheme: AppBarTheme(
         backgroundColor: backgroundColor,
         elevation: 0,
+        centerTitle: true,
       ),
     );
   }
