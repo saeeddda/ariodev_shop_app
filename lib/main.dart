@@ -16,6 +16,8 @@ class MyApp extends StatelessWidget {
       title: 'Shoping App',
       theme: DefaultThemeData.light().getTheme,
       home: const ProductCardScreen(),
+      debugShowCheckedModeBanner: false,
+      home: const HomeScreen(),
     );
   }
 }
