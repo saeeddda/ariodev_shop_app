@@ -13,10 +13,56 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        extendBodyBehindAppBar: true,
         body: SingleChildScrollView(
+          padding: EdgeInsets.zero,
           physics: const BouncingScrollPhysics(),
           child: Column(
             children: [
+              Stack(
+                children: [
+                  SizedBox(
+                    width: double.infinity,
+                    height: 536.0,
+                    child: Image.asset(
+                      'assets/images/other/Big Banner.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Positioned(
+                    left: 20.0,
+                    bottom: 30.0,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Fashion',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline1!
+                              .apply(color: Colors.white)
+                              .copyWith(
+                                fontWeight: FontWeight.w900,
+                                fontSize: 48.0,
+                              ),
+                        ),
+                        Text(
+                          'sale',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline1!
+                              .apply(color: Colors.white)
+                              .copyWith(
+                                fontWeight: FontWeight.w900,
+                                fontSize: 48.0,
+                              ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 30.0),
               //title
               Padding(
                 padding: const EdgeInsets.only(
@@ -56,15 +102,35 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               //prudoct carousel
-              const Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: DefaultDimensions.defaultPadding,
-                ),
-                child: SizedBox(
-                  height: 280.0,
-                  child: DiscountedProductCard(),
-                ),
+              const SizedBox(
+                height: 280.0,
+                child: DiscountedProductCard(),
               ),
+              const SizedBox(height: 30.0),
+              Stack(
+                children: [
+                  SizedBox(
+                    width: double.infinity,
+                    height: 200.0,
+                    child: Image.asset(
+                      'assets/images/other/pexels-photo-911677.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Positioned(
+                    left: 20.0,
+                    bottom: 30.0,
+                    child: Text(
+                      'Street clothes',
+                      style: Theme.of(context)
+                          .textTheme
+                          .headline1!
+                          .apply(color: Colors.white),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 30.0),
               //title
               Padding(
                 padding: const EdgeInsets.only(
@@ -104,141 +170,147 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               //prudoct carousel
-              const Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: DefaultDimensions.defaultPadding,
-                ),
-                child: SizedBox(
-                  height: 280.0,
-                  child: NewProductCard(),
-                ),
+              const SizedBox(
+                height: 280.0,
+                child: NewProductCard(),
               ),
             ],
           ),
         ),
-        bottomNavigationBar: Container(
-          height: 80.0,
-          decoration: BoxDecoration(
-            color: DefaultThemeData.light().whiteColor,
-            borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(
-                  DefaultDimensions.defaultNavBottomBorderRadius),
-              topRight: Radius.circular(
-                  DefaultDimensions.defaultNavBottomBorderRadius),
-            ),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+        bottomNavigationBar: const ShopBottomNavigationBar(),
+      ),
+    );
+  }
+}
+
+class ShopBottomNavigationBar extends StatelessWidget {
+  const ShopBottomNavigationBar({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 80.0,
+      decoration: BoxDecoration(
+        color: DefaultThemeData.light().whiteColor,
+        borderRadius: const BorderRadius.only(
+          topLeft:
+              Radius.circular(DefaultDimensions.defaultNavBottomBorderRadius),
+          topRight:
+              Radius.circular(DefaultDimensions.defaultNavBottomBorderRadius),
+        ),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Column(
             crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.home,
-                    color: DefaultThemeData.light().primaryColor,
-                  ),
-                  const SizedBox(
-                    height: DefaultDimensions.defaultPadding / 4,
-                  ),
-                  Text(
-                    'Home',
-                    style: Theme.of(context)
-                        .textTheme
-                        .copyWith(
-                            caption: TextStyle(
-                          color: DefaultThemeData.light().primaryColor,
-                          fontSize: 10.0,
-                          fontWeight: FontWeight.w700,
-                        ))
-                        .caption,
-                  ),
-                ],
+              Icon(
+                Icons.home,
+                color: DefaultThemeData.light().primaryColor,
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(FontAwesomeIcons.cartShopping),
-                  const SizedBox(
-                    height: DefaultDimensions.defaultPadding / 4,
-                  ),
-                  Text(
-                    'Shop',
-                    style: Theme.of(context)
-                        .textTheme
-                        .copyWith(
-                            caption: const TextStyle(
-                          fontSize: 10.0,
-                        ))
-                        .caption,
-                  ),
-                ],
+              const SizedBox(
+                height: DefaultDimensions.defaultPadding / 4,
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(FontAwesomeIcons.bagShopping),
-                  const SizedBox(
-                    height: DefaultDimensions.defaultPadding / 4,
-                  ),
-                  Text(
-                    'Bag',
-                    style: Theme.of(context)
-                        .textTheme
-                        .copyWith(
-                            caption: const TextStyle(
-                          fontSize: 10.0,
-                        ))
-                        .caption,
-                  ),
-                ],
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(FontAwesomeIcons.solidHeart),
-                  const SizedBox(
-                    height: DefaultDimensions.defaultPadding / 4,
-                  ),
-                  Text(
-                    'Favorites',
-                    style: Theme.of(context)
-                        .textTheme
-                        .copyWith(
-                            caption: const TextStyle(
-                          fontSize: 10.0,
-                        ))
-                        .caption,
-                  ),
-                ],
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(FontAwesomeIcons.solidUser),
-                  const SizedBox(
-                    height: DefaultDimensions.defaultPadding / 4,
-                  ),
-                  Text(
-                    'Profile',
-                    style: Theme.of(context)
-                        .textTheme
-                        .copyWith(
-                            caption: const TextStyle(
-                          fontSize: 10.0,
-                        ))
-                        .caption,
-                  ),
-                ],
+              Text(
+                'Home',
+                style: Theme.of(context)
+                    .textTheme
+                    .copyWith(
+                        caption: TextStyle(
+                      color: DefaultThemeData.light().primaryColor,
+                      fontSize: 10.0,
+                      fontWeight: FontWeight.w700,
+                    ))
+                    .caption,
               ),
             ],
           ),
-        ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(FontAwesomeIcons.cartShopping),
+              const SizedBox(
+                height: DefaultDimensions.defaultPadding / 4,
+              ),
+              Text(
+                'Shop',
+                style: Theme.of(context)
+                    .textTheme
+                    .copyWith(
+                        caption: const TextStyle(
+                      fontSize: 10.0,
+                    ))
+                    .caption,
+              ),
+            ],
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(FontAwesomeIcons.bagShopping),
+              const SizedBox(
+                height: DefaultDimensions.defaultPadding / 4,
+              ),
+              Text(
+                'Bag',
+                style: Theme.of(context)
+                    .textTheme
+                    .copyWith(
+                        caption: const TextStyle(
+                      fontSize: 10.0,
+                    ))
+                    .caption,
+              ),
+            ],
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(FontAwesomeIcons.solidHeart),
+              const SizedBox(
+                height: DefaultDimensions.defaultPadding / 4,
+              ),
+              Text(
+                'Favorites',
+                style: Theme.of(context)
+                    .textTheme
+                    .copyWith(
+                        caption: const TextStyle(
+                      fontSize: 10.0,
+                    ))
+                    .caption,
+              ),
+            ],
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(FontAwesomeIcons.solidUser),
+              const SizedBox(
+                height: DefaultDimensions.defaultPadding / 4,
+              ),
+              Text(
+                'Profile',
+                style: Theme.of(context)
+                    .textTheme
+                    .copyWith(
+                        caption: const TextStyle(
+                      fontSize: 10.0,
+                    ))
+                    .caption,
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
@@ -259,10 +331,12 @@ class NewProductCard extends StatelessWidget {
         final Product product = normalProductList[index];
         return Padding(
           padding: EdgeInsets.fromLTRB(
-            index == 0 ? 0.0 : DefaultDimensions.defaultItemPadding,
+            index == 0
+                ? DefaultDimensions.defaultPadding
+                : DefaultDimensions.defaultItemPadding,
             DefaultDimensions.defaultItemPadding,
-            index == normalProductList.length - 1
-                ? 0.0
+            index == discountedProductList.length - 1
+                ? DefaultDimensions.defaultPadding
                 : DefaultDimensions.defaultItemPadding,
             DefaultDimensions.defaultItemPadding,
           ),
@@ -294,10 +368,12 @@ class DiscountedProductCard extends StatelessWidget {
         final Product product = discountedProductList[index];
         return Padding(
           padding: EdgeInsets.fromLTRB(
-            index == 0 ? 0.0 : DefaultDimensions.defaultItemPadding,
+            index == 0
+                ? DefaultDimensions.defaultPadding
+                : DefaultDimensions.defaultItemPadding,
             DefaultDimensions.defaultItemPadding,
             index == discountedProductList.length - 1
-                ? 0.0
+                ? DefaultDimensions.defaultPadding
                 : DefaultDimensions.defaultItemPadding,
             DefaultDimensions.defaultItemPadding,
           ),
@@ -449,7 +525,7 @@ class ProductCardItem extends StatelessWidget {
                           color: isDiscounted
                               ? DefaultThemeData.light().primaryColor
                               : DefaultThemeData.light().primaryTextColor,
-                          fontWeight: FontWeight.w700,
+                          fontWeight: FontWeight.w500,
                         ))
                         .subtitle1,
                   ),
