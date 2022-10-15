@@ -7,4 +7,5 @@ class DefaultDimensions {
   static const double defaultButtonBorderRadius = 25.0;
   static const double defaultNavBottomBorderRadius = 12.0;
   static const double defaultBottomSheetBorderRadius = 34.0;
+  static const double defaultTextFieldBorder = 4.0;
 }

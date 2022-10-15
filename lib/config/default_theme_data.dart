@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/config/default_colors.dart';
+import 'package:shop_app/config/default_dimensions.dart';
 import 'package:shop_app/config/default_fonts.dart';
 
 class DefaultThemeData {
@@ -99,6 +100,39 @@ class DefaultThemeData {
           fontWeight: FontWeight.w500,
           color: primaryTextColor,
         ),
+        subtitle2: TextStyle(
+          fontFamily: defaultFontFamily,
+          fontSize: 14.0,
+          fontWeight: FontWeight.w500,
+          color: secondaryTextColor,
+        ),
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ButtonStyle(
+          backgroundColor:
+              MaterialStateProperty.all<Color>(DefaultLightColor.primaryColor),
+          foregroundColor: MaterialStateProperty.all<Color>(whiteColor),
+          textStyle: MaterialStateProperty.all<TextStyle>(
+            TextStyle(
+              fontFamily: defaultFontFamily,
+              fontSize: 14.0,
+              fontWeight: FontWeight.w500,
+              color: whiteColor,
+            ),
+          ),
+        ),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        border: OutlineInputBorder(
+            borderRadius:
+                BorderRadius.circular(DefaultDimensions.defaultTextFieldBorder),
+            borderSide: BorderSide.none),
+        fillColor: whiteColor,
+        filled: true,
+      ),
+      appBarTheme: AppBarTheme(
+        backgroundColor: backgroundColor,
+        elevation: 0,
       ),
       textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
