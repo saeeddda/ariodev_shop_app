@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:shop_app/screen/login_register_screens/components/button_component.dart';
+import 'package:shop_app/screens/login_register_screens/components/button_component.dart';
 
 class VerificationScreen extends StatelessWidget {
   const VerificationScreen({super.key});
