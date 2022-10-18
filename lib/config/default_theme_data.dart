@@ -87,6 +87,7 @@ class DefaultThemeData {
           fontSize: 14.0,
           fontWeight: FontWeight.w400,
           color: primaryTextColor,
+          height: 1.2,
         ),
         caption: TextStyle(
           fontFamily: defaultFontFamily,

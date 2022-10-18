@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/config/default_theme_data.dart';
 import 'package:shop_app/screens/login_register_screens/login_screen.dart';
+import 'package:shop_app/screens/login_register_screens/verification_screen.dart';
 import 'package:shop_app/screens/product_screens/product_card_screen.dart';
 import 'package:shop_app/screens/home_screen.dart';
 
