@@ -1,0 +1,80 @@
+name: shop_app
+description: A shoping app for woocommerce
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.1 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  font_awesome_flutter: ^10.2.1
+  carousel_slider: ^4.1.1
+  flutter_rating_bar: ^4.0.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/icons/
+    - assets/images/avatar/
+    - assets/images/category/
+    - assets/images/discount/
+    - assets/images/other/
+    - assets/images/products/
+    - assets/images/reviews/
+
+  fonts:
+    - family: Metropolis
+      fonts:
+        - asset: assets/fonts/Metropolis-Thin.otf
+          weight: 100
+        - asset: assets/fonts/Metropolis-Light.otf
+          weight: 300
+        - asset: assets/fonts/Metropolis-Regular.otf
+          weight: 400
+        - asset: assets/fonts/Metropolis-Medium.otf
+          weight: 500
+        - asset: assets/fonts/Metropolis-SemiBold.otf
+          weight: 600
+        - asset: assets/fonts/Metropolis-Bold.otf
+          weight: 700
+        - asset: assets/fonts/Metropolis-ExtraBold.otf
+          weight: 800
+        - asset: assets/fonts/Metropolis-Black.otf
+          weight: 900
+  
+    - family: IranYekan
+      fonts:
+        - asset: assets/fonts/IRANYekanMobileThin.ttf
+          weight: 100
+        - asset: assets/fonts/IRANYekanMobileLight.ttf
+          weight: 300
+        - asset: assets/fonts/IRANYekanMobileRegular.ttf
+          weight: 400
+        - asset: assets/fonts/IRANYekanMobileMedium.ttf
+          weight: 500
+        - asset: assets/fonts/IRANYekanMobileBold.ttf
+          weight: 700
+        - asset: assets/fonts/IRANYekanMobileExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/IRANYekanMobileBlack.ttf
+          weight: 900
+        
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
