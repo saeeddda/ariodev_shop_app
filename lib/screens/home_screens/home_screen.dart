@@ -461,3 +461,6 @@ class DiscountedProductCard extends StatelessWidget {
     );
   }
 }
+=======
+
+>>>>>>> 4c9cdff7ff9660e01767e513b1be6559707cd69a:lib/screens/home_screen.dart
