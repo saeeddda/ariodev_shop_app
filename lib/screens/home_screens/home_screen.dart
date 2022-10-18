@@ -4,8 +4,8 @@ import 'package:shop_app/config/default_colors.dart';
 import 'package:shop_app/config/default_dimensions.dart';
 import 'package:shop_app/config/default_theme_data.dart';
 import 'package:shop_app/data/product_data.dart';
-import 'package:shop_app/screens/home_screens/componenets/bottom_navigation.dart';
-import 'package:shop_app/screens/home_screens/componenets/product_card_item.dart';
+import 'package:shop_app/screens/home_screens/components/bottom_navigation.dart';
+import 'package:shop_app/screens/home_screens/components/product_card_item.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
