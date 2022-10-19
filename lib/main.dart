@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/config/default_theme_data.dart';
-import 'package:shop_app/screens/bags_screen/mybag_screen.dart';
-import 'package:shop_app/screens/login_register_screens/login_screen.dart';
-import 'package:shop_app/screens/product_screens/product_card_screen.dart';
-import 'package:shop_app/screens/home_screen.dart';
+import 'package:shop_app/screens/bags_screen/checkout_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Shoping App',
       theme: DefaultThemeData.light().getTheme,
-      home: const MyBagScreen(),
+      home: const CheckOutScreen(),
     );
   }
 }

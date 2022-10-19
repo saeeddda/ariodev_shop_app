@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:shop_app/config/default_colors.dart';
 import 'package:shop_app/config/default_dimensions.dart';
 import 'package:shop_app/config/default_theme_data.dart';
+import 'package:shop_app/screens/bags_screen/components/default_appbar.dart';
 
 class CheckOutScreen extends StatelessWidget {
   const CheckOutScreen({Key? key}) : super(key: key);
@@ -14,23 +15,7 @@ class CheckOutScreen extends StatelessWidget {
     const bodyMargin = DefaultDimensions.defaultPadding;
     return Scaffold(
       backgroundColor: DefaultLightColor.backgroundColor,
-      appBar: AppBar(
-        backgroundColor: DefaultLightColor.whiteColor,
-        elevation: 3,
-        shadowColor: Colors.black.withOpacity(0.3),
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Icons.arrow_back_ios_new_outlined,
-            color: DefaultLightColor.primaryTextColor,
-          ),
-        ),
-        title: Text(
-          "Checkout",
-          style: textTheme.headline2,
-        ),
-        centerTitle: true,
-      ),
+      appBar: defaultAppBar("Checkout"),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(bodyMargin, 32, bodyMargin, 0),
         child: Column(
@@ -111,10 +96,10 @@ class CheckOutScreen extends StatelessWidget {
                             blurRadius: 25,
                             offset: const Offset(0, 1)),
                       ]),
-                  child: Image.asset("assets/images/master.png"),
+                  child: Image.asset("assets/icons/master.png"),
                 ),
                 const SizedBox(width: 17),
-                Text("**** **** **** 3947",style: textTheme.headline5,)
+                Text("**** **** **** 3947",style: textTheme.subtitle2,)
               ],
             ),
 
@@ -140,7 +125,7 @@ class CheckOutScreen extends StatelessWidget {
                       ]),
                   child: Column(
                     children: [
-                      Image.asset("assets/images/Fedex.png"),
+                      Image.asset("assets/icons/post.png"),
                       const SizedBox(height: 2),
                       Text("2-3 days",style: textTheme.subtitle1!.apply(color: DefaultLightColor.secondaryTextColor))
                     ],
@@ -162,7 +147,7 @@ class CheckOutScreen extends StatelessWidget {
                       ]),
                   child: Column(
                     children: [
-                      Image.asset("assets/images/Fedex.png"),
+                      Image.asset("assets/icons/post.png"),
                       const SizedBox(height: 2),
                       Text("2-3 days",style: textTheme.subtitle1!.apply(color: DefaultLightColor.secondaryTextColor))
                     ],
@@ -184,7 +169,7 @@ class CheckOutScreen extends StatelessWidget {
                       ]),
                   child: Column(
                     children: [
-                      Image.asset("assets/images/Fedex.png"),
+                      Image.asset("assets/icons/post.png"),
                       const SizedBox(height: 2),
                       Text("2-3 days",style: textTheme.subtitle1!.apply(color: DefaultLightColor.secondaryTextColor))
                     ],
@@ -243,4 +228,6 @@ class CheckOutScreen extends StatelessWidget {
       ),
     );
   }
+
+
 }
