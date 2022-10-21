@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:shop_app/config/default_colors.dart';
+import 'package:shop_app/screens/home_screen.dart';
 
 class ProductCardScreen extends StatelessWidget {
   const ProductCardScreen({super.key});
