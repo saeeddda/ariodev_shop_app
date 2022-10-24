@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:shop_app/config/default_colors.dart';
 import 'package:shop_app/screens/home_screen.dart';
+import 'package:shop_app/screens/login_register_screens/components/button_component.dart';
 
 class ProductCardScreen extends StatelessWidget {
   const ProductCardScreen({super.key});
@@ -14,6 +15,28 @@ class ProductCardScreen extends StatelessWidget {
     var textTheme = Theme.of(context).textTheme;
     return SafeArea(
       child: Scaffold(
+        bottomNavigationBar: Stack(
+          children: [
+            Container(
+              clipBehavior: Clip.antiAliasWithSaveLayer,
+              height: 80,
+              decoration: const BoxDecoration(color: Colors.white, boxShadow: [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 10,
+                  offset: Offset(0, -5),
+                ),
+              ]),
+            ),
+            Positioned(
+              top: 15,
+              bottom: 15,
+              left: 20,
+              right: 20,
+              child: ButtonBtn().primaryButton('Add To Card'),
+            ),
+          ],
+        ),
         backgroundColor: DefaultLightColor.backgroundColor,
         appBar: AppBar(
           title: const Text(
@@ -31,7 +54,7 @@ class ProductCardScreen extends StatelessWidget {
           ],
         ),
         body: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -67,17 +90,17 @@ class ProductCardScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8),
                             border: Border.all(color: Colors.red)),
                         child: Padding(
-                          padding: EdgeInsets.fromLTRB(10, 0, 5, 0),
+                          padding: const EdgeInsets.fromLTRB(10, 0, 5, 0),
                           child: DropdownButton(
                               value: 'Size',
                               underline: const SizedBox.shrink(),
-                              icon: Icon(Icons.keyboard_arrow_down_sharp),
+                              icon: const Icon(Icons.keyboard_arrow_down_sharp),
                               isExpanded: true,
                               borderRadius: BorderRadius.circular(8),
-                              items: [
+                              items: const [
                                 DropdownMenuItem(
-                                  child: Text("Size"),
                                   value: "Size",
+                                  child: Text("Size"),
                                 ),
                               ],
                               onChanged: (value) {}),
@@ -91,16 +114,16 @@ class ProductCardScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8),
                             border: Border.all(color: Colors.grey)),
                         child: Padding(
-                          padding: EdgeInsets.fromLTRB(10, 0, 5, 0),
+                          padding: const EdgeInsets.fromLTRB(10, 0, 5, 0),
                           child: DropdownButton(
                               value: 'Black',
                               underline: const SizedBox.shrink(),
-                              icon: Icon(Icons.keyboard_arrow_down_sharp),
+                              icon: const Icon(Icons.keyboard_arrow_down_sharp),
                               isExpanded: true,
-                              items: [
+                              items: const [
                                 DropdownMenuItem(
-                                  child: Text("Black"),
                                   value: "Black",
+                                  child: Text("Black"),
                                 ),
                               ],
                               onChanged: (value) {}),
@@ -166,13 +189,11 @@ class ProductCardScreen extends StatelessWidget {
                       direction: Axis.horizontal,
                       itemCount: 5,
                       glow: false,
-                      itemBuilder: (context, _) => Icon(
+                      itemBuilder: (context, _) => const Icon(
                         Icons.star,
                         color: Colors.amber,
                       ),
-                      onRatingUpdate: (rating) {
-                        print(rating);
-                      },
+                      onRatingUpdate: (rating) {},
                     ),
                     Text(
                       '(10)',
@@ -192,17 +213,17 @@ class ProductCardScreen extends StatelessWidget {
                 color: DefaultLightColor.secondaryTextColor,
                 thickness: 0.3,
               ),
-              ProductCardItems(size, textTheme, 'Item details'),
+              productScreenDetailsBtn(size, textTheme, 'Item details'),
               const Divider(
                 color: DefaultLightColor.secondaryTextColor,
                 thickness: 0.3,
               ),
-              ProductCardItems(size, textTheme, 'Shipping info'),
+              productScreenDetailsBtn(size, textTheme, 'Shipping info'),
               const Divider(
                 color: DefaultLightColor.secondaryTextColor,
                 thickness: 0.3,
               ),
-              ProductCardItems(size, textTheme, 'Support'),
+              productScreenDetailsBtn(size, textTheme, 'Support'),
               const Divider(
                 color: DefaultLightColor.secondaryTextColor,
                 thickness: 0.3,
@@ -223,6 +244,10 @@ class ProductCardScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              const SizedBox(
+                height: 280.0,
+                child: NewProductCard(),
+              ),
             ],
           ),
         ),
@@ -230,7 +255,8 @@ class ProductCardScreen extends StatelessWidget {
     );
   }
 
-  Widget ProductCardItems(Size size, TextTheme textTheme, String itemTitle) {
+  Widget productScreenDetailsBtn(
+      Size size, TextTheme textTheme, String itemTitle) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
       child: SizedBox(
