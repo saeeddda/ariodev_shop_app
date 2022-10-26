@@ -5,6 +5,7 @@ import 'package:shop_app/config/default_theme_data.dart';
 import 'package:shop_app/screens/login_register_screens/register_screen.dart';
 import 'package:shop_app/screens/login_register_screens/verification_screen.dart';
 import 'package:shop_app/config/default_theme_data.dart';
+import 'package:shop_app/screens/product_screens/rating_reviews_screen.dart';
 import 'package:shop_app/screens/login_register_screens/login_screen.dart';
 import 'package:shop_app/screens/product_screens/product_card_screen.dart';
 import 'package:shop_app/screens/bags_screen/success_screen.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Shoping App',
       theme: DefaultThemeData.light().getTheme,
-      home: const SuccessScreen(),
+      home: const RatingReviewScreen(),
     );
   }
 }
