@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/config/default_theme_data.dart';
-import 'package:shop_app/screens/bags_screen/checkout_screen.dart';
+import 'package:shop_app/screens/bags_screen/success_screen.dart';
+
 
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Shoping App',
       theme: DefaultThemeData.light().getTheme,
-      home: const CheckOutScreen(),
+      home: const SuccessScreen(),
     );
   }
 }

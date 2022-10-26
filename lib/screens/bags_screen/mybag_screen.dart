@@ -6,6 +6,7 @@ import 'package:shop_app/config/default_dimensions.dart';
 import 'package:shop_app/config/default_theme_data.dart';
 import 'package:shop_app/screens/bags_screen/components/bag_item.dart';
 import 'package:shop_app/screens/bags_screen/components/bottom_navigation.dart';
+import 'package:shop_app/screens/bags_screen/components/custom_bottom.dart';
 import 'package:shop_app/screens/bags_screen/components/offer_list_item.dart';
 import 'package:shop_app/screens/bags_screen/components/offer_textfield.dart';
 
@@ -132,19 +133,10 @@ class MyBagScreen extends StatelessWidget {
             ),
 
             //check out btn
-            Padding(
-              padding: const EdgeInsets.symmetric(
+            const Padding(
+              padding: EdgeInsets.symmetric(
                   horizontal: DefaultDimensions.defaultPadding),
-              child: ElevatedButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          DefaultLightColor.primaryColor),
-                      minimumSize: MaterialStateProperty.all(
-                          const Size(double.infinity, 48)),
-                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(25)))),
-                  child: const Text("CHECK OUT")),
+              child: CustomBottom(title: "CHECK OUT")
             )
           ],
         ),

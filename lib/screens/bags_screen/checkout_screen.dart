@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:shop_app/config/default_colors.dart';
 import 'package:shop_app/config/default_dimensions.dart';
 import 'package:shop_app/config/default_theme_data.dart';
+import 'package:shop_app/screens/bags_screen/components/custom_bottom.dart';
 import 'package:shop_app/screens/bags_screen/components/default_appbar.dart';
 
 class CheckOutScreen extends StatelessWidget {
@@ -212,16 +213,9 @@ class CheckOutScreen extends StatelessWidget {
             ),
 
             //SUBMIT ORDER btn
-            Padding(
-              padding: const EdgeInsets.only(top: 26),
-              child: ElevatedButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(DefaultLightColor.primaryColor),
-                      minimumSize: MaterialStateProperty.all(const Size(double.infinity, 48)),
-                      shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)))
-                  ),
-                  child:const Text("SUBMIT ORDER")),
+            const Padding(
+              padding: EdgeInsets.only(top: 26),
+              child: CustomBottom(title: "SUBMIT ORDER"),
             )
           ],
         ),
@@ -231,3 +225,4 @@ class CheckOutScreen extends StatelessWidget {
 
 
 }
+
