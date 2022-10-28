@@ -75,13 +75,6 @@ class HomeScreen extends StatelessWidget {
                                 fixedSize: MaterialStateProperty.all(
                                   const Size(160.0, 36.0),
                                 ),
-                                shape: MaterialStateProperty.all(
-                                  RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(
-                                        DefaultDimensions
-                                            .defaultButtonBorderRadius),
-                                  ),
-                                ),
                               ),
                               onPressed: () {},
                               child: const Text('Check'),
@@ -532,7 +525,7 @@ class NewProductCard extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       itemCount: normalProductList.length,
       itemBuilder: ((context, index) {
-        final Product product = normalProductList[index];
+        final ProductModel product = normalProductList[index];
         return Padding(
           padding: EdgeInsets.fromLTRB(
             index == 0
@@ -569,7 +562,7 @@ class DiscountedProductCard extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       itemCount: discountedProductList.length,
       itemBuilder: ((context, index) {
-        final Product product = discountedProductList[index];
+        final ProductModel product = discountedProductList[index];
         return Padding(
           padding: EdgeInsets.fromLTRB(
             index == 0
@@ -603,7 +596,7 @@ class ProductCardItem extends StatelessWidget {
       required this.onCardPress,
       required this.onIconPress});
 
-  final Product product;
+  final ProductModel product;
   final bool isDiscounted;
   final IconData icon;
   final Function() onCardPress;

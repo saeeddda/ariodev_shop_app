@@ -1,4 +1,4 @@
-class Product {
+class ProductModel {
   String? title;
   String? image;
   String? category;
@@ -8,7 +8,7 @@ class Product {
   double? discountPrice;
   int? discountPercent;
 
-  Product({
+  ProductModel({
     this.title,
     this.image,
     this.category,
@@ -20,8 +20,8 @@ class Product {
   });
 }
 
-List<Product> normalProductList = [
-  Product(
+List<ProductModel> normalProductList = [
+  ProductModel(
     title: 'Evening Dress',
     image: 'assets/images/products/product-1.png',
     category: 'Dorothy Perkins',
@@ -30,7 +30,7 @@ List<Product> normalProductList = [
     rate: 5.0,
     price: 15.0,
   ),
-  Product(
+  ProductModel(
     title: 'H&M',
     image: 'assets/images/products/product-2.png',
     category: 'Short black dress',
@@ -39,7 +39,7 @@ List<Product> normalProductList = [
     rate: 4.5,
     price: 12.99,
   ),
-  Product(
+  ProductModel(
     title: 'T-Shirt Sailing',
     image: 'assets/images/products/product-3.png',
     category: 'Mango Boy',
@@ -48,7 +48,7 @@ List<Product> normalProductList = [
     rate: 0.0,
     price: 10,
   ),
-  Product(
+  ProductModel(
     title: 'Jeans',
     image: 'assets/images/products/product-4.png',
     category: 'Cool',
@@ -57,7 +57,7 @@ List<Product> normalProductList = [
     rate: 0.0,
     price: 45,
   ),
-  Product(
+  ProductModel(
     title: 'Sport Dress',
     image: 'assets/images/products/product-6.png',
     category: 'Dorothy Perkins',
@@ -68,8 +68,8 @@ List<Product> normalProductList = [
   ),
 ];
 
-List<Product> discountedProductList = [
-  Product(
+List<ProductModel> discountedProductList = [
+  ProductModel(
     title: 'Evening Dress',
     image: 'assets/images/products/product-6.png',
     category: 'Dorothy Perkins',
@@ -80,7 +80,7 @@ List<Product> discountedProductList = [
     discountPrice: 12.0,
     discountPercent: 20,
   ),
-  Product(
+  ProductModel(
     title: 'H&M',
     image: 'assets/images/products/product-7.png',
     category: 'Short black dress',
@@ -91,7 +91,7 @@ List<Product> discountedProductList = [
     discountPrice: 10.0,
     discountPercent: 25,
   ),
-  Product(
+  ProductModel(
     title: 'T-Shirt Sailing',
     image: 'assets/images/products/product-8.png',
     category: 'Mango Boy',
@@ -102,7 +102,7 @@ List<Product> discountedProductList = [
     discountPrice: 18.0,
     discountPercent: 40,
   ),
-  Product(
+  ProductModel(
     title: 'Jeans',
     image: 'assets/images/products/product-9.png',
     category: 'Cool',
@@ -113,7 +113,7 @@ List<Product> discountedProductList = [
     discountPrice: 35.0,
     discountPercent: 10,
   ),
-  Product(
+  ProductModel(
     title: 'Sport Dress',
     image: 'assets/images/products/product-10.png',
     category: 'Dorothy Perkins',

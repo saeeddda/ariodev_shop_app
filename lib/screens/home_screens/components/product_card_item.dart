@@ -13,7 +13,7 @@ class ProductCardItem extends StatelessWidget {
       required this.onCardPress,
       required this.onIconPress});
 
-  final Product product;
+  final ProductModel product;
   final bool isDiscounted;
   final IconData icon;
   final Function() onCardPress;
