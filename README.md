@@ -4,6 +4,6 @@ A app for create orders and create payments
 
 ## Requirments
 
--Wordpress
--WooCommerce
+- Wordpress
+- WooCommerce
 - and more ... 
