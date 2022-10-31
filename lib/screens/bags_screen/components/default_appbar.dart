@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shop_app/config/default_colors.dart';
 import 'package:shop_app/config/default_theme_data.dart';
 
-AppBar defaultAppBar(String title) {
+AppBar defaultAppBar(String title,Widget? actionIcon) {
   final textTheme = DefaultThemeData.light().getTheme.textTheme;
   return AppBar(
     backgroundColor: DefaultLightColor.whiteColor,
@@ -15,6 +15,7 @@ AppBar defaultAppBar(String title) {
         color: DefaultLightColor.primaryTextColor,
       ),
     ),
+    actions: [actionIcon!],
     title: Text(
       title,
       style: textTheme.headline2,

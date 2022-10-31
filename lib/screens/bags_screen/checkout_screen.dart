@@ -16,7 +16,7 @@ class CheckOutScreen extends StatelessWidget {
     const bodyMargin = DefaultDimensions.defaultPadding;
     return Scaffold(
       backgroundColor: DefaultLightColor.backgroundColor,
-      appBar: defaultAppBar("Checkout"),
+      appBar: defaultAppBar("Checkout",null),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(bodyMargin, 32, bodyMargin, 0),
         child: Column(
