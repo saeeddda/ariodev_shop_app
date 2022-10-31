@@ -13,7 +13,7 @@ class AddingShippingAddress extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = DefaultThemeData.light().getTheme.textTheme;
     return Scaffold(
-      appBar: defaultAppBar("Adding Shipping Address"),
+      appBar: defaultAppBar("Adding Shipping Address",null),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(DefaultDimensions.defaultPadding,35,DefaultDimensions.defaultPadding,0),
         child: SingleChildScrollView(

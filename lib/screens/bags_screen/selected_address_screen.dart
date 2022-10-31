@@ -20,7 +20,7 @@ class AddResScreen extends StatelessWidget {
           size: 48,
         ),
       ),
-      appBar: defaultAppBar("Shipping Addresses"),
+      appBar: defaultAppBar("Shipping Addresses",null),
       body: Column(
         children: [
           const SizedBox(height: 24),

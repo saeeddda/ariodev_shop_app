@@ -6,10 +6,8 @@ import 'package:shop_app/config/default_colors.dart';
 import 'package:shop_app/config/default_dimensions.dart';
 import 'package:shop_app/config/default_theme_data.dart';
 import 'package:shop_app/screens/bags_screen/components/add_card_bottomsheet.dart';
-import 'package:shop_app/screens/bags_screen/components/custom_bottom.dart';
 import 'package:shop_app/screens/bags_screen/components/default_appbar.dart';
 import 'package:shop_app/screens/bags_screen/components/payment_card_item.dart';
-import 'package:shop_app/screens/login_register_screens/components/textfield_component.dart';
 
 class SelectCardScreen extends StatelessWidget {
   const SelectCardScreen({Key? key}) : super(key: key);
@@ -29,7 +27,7 @@ class SelectCardScreen extends StatelessWidget {
           size: 48,
         ),
       ),
-      appBar: defaultAppBar("Payment methods"),
+      appBar: defaultAppBar("Payment methods",null),
       backgroundColor: DefaultLightColor.backgroundColor,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
