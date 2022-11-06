@@ -26,13 +26,13 @@ Future<dynamic> addCardBottomSheet(BuildContext context,TextTheme textTheme) {
             children: [
               Text("Add new card",style: textTheme.headline3,),
               const SizedBox(height: 18),
-              informationTextField("Name on card", false, textTheme,false,null),
+              informationTextField("Name on card", false, textTheme,TextInputType.text,null),
               const SizedBox(height: 20),
-              informationTextField("Card number", false, textTheme,true,Image.asset("assets/icons/master.png",width: 64,)),
+              informationTextField("Card number", false, textTheme,TextInputType.number,Image.asset("assets/icons/master.png",width: 64,)),
               const SizedBox(height: 20),
-              informationTextField("Expire Date", false, textTheme,true,null),
+              informationTextField("Expire Date", false, textTheme,TextInputType.datetime,null),
               const SizedBox(height: 20),
-              informationTextField("CVV", false, textTheme,true,const Icon(Icons.question_mark)),
+              informationTextField("CVV", false, textTheme,TextInputType.number,const Icon(Icons.question_mark)),
               const SizedBox(height: 29),
               Row(
                 children: [
@@ -61,12 +61,12 @@ Future<dynamic> addCardBottomSheet(BuildContext context,TextTheme textTheme) {
 
 }
 
-Widget informationTextField(String lable, bool isPassword, TextTheme textTheme,bool isNumber,Widget? suffixItem) {
+Widget informationTextField(String lable, bool isPassword, TextTheme textTheme,TextInputType keyboardType,Widget? suffixItem) {
   return SizedBox(
     width: double.infinity,
     height: DefaultDimensions.defaultTextFieldHeight,
     child: TextField(
-      keyboardType: isNumber? TextInputType.number : null,
+      keyboardType: keyboardType,
       obscureText: isPassword ? true : false,
       cursorColor: DefaultDarkColor.darkColor,
       cursorHeight: DefaultDimensions.defaultCursorHeight,

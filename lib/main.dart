@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/config/default_theme_data.dart';
-import 'package:shop_app/screens/profile_screen/order_details_screen.dart';
+
+import 'screens/profile_screen/seting_screen.dart';
 
 
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Shoping App',
       theme: DefaultThemeData.light().getTheme,
-      home: const OrderDetailsScreen(),
+      home: const SetingScreen(),
     );
   }
 }
