@@ -87,6 +87,7 @@ class DefaultThemeData {
           fontSize: 14.0,
           fontWeight: FontWeight.w400,
           color: primaryTextColor,
+          height: 1.2,
         ),
         caption: TextStyle(
           fontFamily: defaultFontFamily,
@@ -109,8 +110,20 @@ class DefaultThemeData {
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
-          backgroundColor:
-              MaterialStateProperty.all<Color>(DefaultLightColor.primaryColor),
+          fixedSize: MaterialStateProperty.all(
+            const Size(
+              160.0,
+              DefaultDimensions.defaultButtonHeight,
+            ),
+          ),
+          shape: MaterialStateProperty.all(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(
+                DefaultDimensions.defaultButtonBorderRadius,
+              ),
+            ),
+          ),
+          backgroundColor: MaterialStateProperty.all<Color>(primaryColor),
           foregroundColor: MaterialStateProperty.all<Color>(whiteColor),
           textStyle: MaterialStateProperty.all<TextStyle>(
             TextStyle(
@@ -120,6 +133,7 @@ class DefaultThemeData {
               color: whiteColor,
             ),
           ),
+          shadowColor: MaterialStateProperty.all(primaryColor.withAlpha(100)),
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(

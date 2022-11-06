@@ -22,9 +22,7 @@ class LoginPage extends StatelessWidget {
                     "Login",
                     style: textTheme.headline1,
                   ),
-                  SizedBox(
-                    height: 100,
-                  ),
+                  const SizedBox(height: 100),
                   SizedBox(
                     width: double.infinity,
                     height: 64,
@@ -34,7 +32,7 @@ class LoginPage extends StatelessWidget {
                             'Email',
                             style: textTheme.caption,
                           ),
-                          suffixIcon: Icon(
+                          suffixIcon: const Icon(
                             CupertinoIcons.check_mark,
                             color: Colors.green,
                           )),
@@ -56,11 +54,9 @@ class LoginPage extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(0, 20, 0, 40),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
+                      children: const [
                         Text("Forgot your password?"),
-                        const SizedBox(
-                          width: 5,
-                        ),
+                        SizedBox(width: 5),
                         Icon(
                           CupertinoIcons.arrow_right,
                           color: Colors.red,
@@ -75,7 +71,7 @@ class LoginPage extends StatelessWidget {
                         width: double.infinity,
                         height: 48,
                         child: ElevatedButton(
-                            onPressed: () {}, child: Text("LOGIN"))),
+                            onPressed: () {}, child: const Text("LOGIN"))),
                   ),
                 ],
               ),
@@ -85,8 +81,8 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Center(child: Text("Or login with social account")),
-                  SizedBox(height: 12),
+                  const Center(child: Text("Or login with social account")),
+                  const SizedBox(height: 12),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -96,7 +92,7 @@ class LoginPage extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(24),
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 blurRadius: 8,
                                 color: Color.fromARGB(12, 0, 0, 0),
@@ -108,14 +104,14 @@ class LoginPage extends StatelessWidget {
                           scale: 3.5,
                         ),
                       ),
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
                       Container(
                         width: 92,
                         height: 64,
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(24),
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 blurRadius: 8,
                                 color: Color.fromARGB(12, 0, 0, 0),
